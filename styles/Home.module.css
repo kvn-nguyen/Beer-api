@@ -1,116 +1,180 @@
-.container {
-  padding: 0 2rem;
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.beer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem 0;
+  position: relative;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.beer img {
+  height: 250px;
 }
 
-.footer a {
+.beerPic {
   display: flex;
   justify-content: center;
+}
+
+.beerButton {
+  display: flex;
+  justify-content: space-around;
+}
+
+.formSort {
+  display: flex;
+  border-bottom: 2px solid white;
+  color: white;
+  display: inline-flex;
+  margin: 0 1rem 0 1rem;
+  padding: 0.5rem;
+}
+.formSort h4 {
+  justify-content: flex-start;
   align-items: center;
-  flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.inSort {
+  align-items: center;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.inSort label {
+  padding-right: 1rem;
 }
 
-.title {
+.listAction {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 1rem;
+  overflow-x: scroll;
+}
+
+.testB {
+  animation: scroll 70s linear infinite;
+  background-color: #00b2c9;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  min-height: 100vh;
+  min-width: 300px;
+  width: 100%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  color: white;
+}
+
+
+.beerContainer {
+  width: 600px;
+  margin: auto;
+}
+
+.beerOverview {
+  padding: 2rem 0.8rem 0 0.8rem;
+}
+
+.testB h1 {
+  display: flex;
+  justify-content: center;
   margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  padding-top: 1rem;
 }
 
-.title,
-.description {
-  text-align: center;
+.testB img {
+  height: 300px;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.detailPic {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  padding-top: 2rem;
+  justify-content: space-around;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
+.detail h1{
+  display: flex;
+  justify-content: flex-start;
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  padding-bottom: 1rem;
+  padding-top: 0rem;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.detail p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.detailPic img {
+  padding-left: 4rem;
+}
+
+
+@keyframes scroll {
+  0%{
+    background-position: 0px 0px;
+  }
+  100%{
+    background-position: 1500px 1500px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .testB {
+    animation: scroll 200s linear infinite;
+  }
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+@media all and (max-height: 900px) {
+  .title {
+    padding-top: 1rem;
+  }
+  .listAction {
+    padding-top: 2rem;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .beerContainer {
+    width: auto;
+  }
+  .detailPic {
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .detailPic img{
+    padding-left: 0rem;
+    padding-top: 1rem;
   }
 }
