@@ -8,7 +8,6 @@ const Drink = () => {
   const router = useRouter();
   
   const [beerList, setBeerList] = useState([]);
-  const [hopList, setHopList] = useState([]);
 
 
   useEffect(() => {
@@ -21,8 +20,6 @@ const Drink = () => {
       .catch(error => console.log(error));
     }
   }, [router.isReady]);
-
-    console.log(beerList);
 
   return (
     <div className={styles.testB}>

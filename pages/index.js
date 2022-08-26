@@ -108,7 +108,7 @@ export default function Home() {
               onChange={sortFeatured}
               checked={isChecked("featured")}
             />
-            <label for="featured">Featured</label>
+            <label htmlFor="featured">Featured</label>
             <input
               type="radio"
               name="filter"
@@ -117,7 +117,7 @@ export default function Home() {
               onChange={sortName}
               checked={isChecked("name")}
             />
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="radio"
               name="filter"
@@ -126,7 +126,7 @@ export default function Home() {
               onChange={sortABV}
               checked={isChecked("abv")}
             />
-            <label for="abv">ABV</label>
+            <label htmlFor="abv">ABV</label>
             <input
               type="radio"
               name="filter"
@@ -135,7 +135,7 @@ export default function Home() {
               onChange={sortDate}
               checked={isChecked("latest")}
             />
-            <label for="latest">Newest</label>
+            <label htmlFor="latest">Newest</label>
           </div>
         </form>
       </div>
