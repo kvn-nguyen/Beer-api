@@ -28,7 +28,7 @@ const Drink = () => {
       <div className={styles.beerOverview}>
         {beerList.map(beer => (
           <div key={beer.id}>
-            <nav><Link href={'/'}><a>Beers Overview</a></Link> <span>></span> {beer.name}</nav>
+            <nav><Link href={'/'}><a>Beers Overview</a></Link> <span></span> {beer.name}</nav>
             <div className={styles.detailPic}>
               <div className={styles.detail}>
                 <h1>{beer.name}</h1>
