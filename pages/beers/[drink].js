@@ -22,7 +22,7 @@ const Drink = () => {
   }, [router.isReady]);
 
   return (
-    <div className={styles.testB}>
+    <div className={styles.container}>
     <div className={styles.beerContainer}>
       <h1>Golden Bro Beers</h1>
       <div className={styles.beerOverview}>

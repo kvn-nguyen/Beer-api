@@ -9,7 +9,7 @@ export default function Home() {
   const [beerList, setBeerList] = useState([]);
   const [radioBtn, setRadioBtn] = useState("featured");
 
-  const isChecked = (value) => value === radioBtn;
+  const isChecked = value => value === radioBtn;
 
   // const getBeer = (e) => {
   //   e.preventDefault();
@@ -29,14 +29,14 @@ export default function Home() {
 
   const beerAPI = "https://api.punkapi.com/v2/beers";
 
-  const sortFeatured = ({target: { value }}) => {
+  const sortFeatured = ({ target: { value } }) => {
     axios
       .get(beerAPI)
       .then(result => setBeerList(result.data))
       .catch(error => console.log(error));
     setRadioBtn(value);
   };
-  const sortName = ({target: { value }}) => {
+  const sortName = ({ target: { value } }) => {
     axios
       .get(beerAPI)
       .then(result => {
@@ -46,9 +46,9 @@ export default function Home() {
         setBeerList(nameSort);
       })
       .catch(error => console.log(error));
-      setRadioBtn(value);
+    setRadioBtn(value);
   };
-  const sortABV = ({target: { value }}) => {
+  const sortABV = ({ target: { value } }) => {
     axios
       .get(beerAPI)
       .then(result => {
@@ -56,9 +56,9 @@ export default function Home() {
         setBeerList(abvSort);
       })
       .catch(error => console.log(error));
-      setRadioBtn(value);
+    setRadioBtn(value);
   };
-  const sortDate = ({target: { value }}) => {
+  const sortDate = ({ target: { value } }) => {
     axios
       .get(beerAPI)
       .then(result => {
@@ -77,7 +77,7 @@ export default function Home() {
         setBeerList(dateSort);
       })
       .catch(error => console.log(error));
-      setRadioBtn(value);
+    setRadioBtn(value);
   };
 
   return (
@@ -88,11 +88,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.bg}></div>
-      <div className={styles.bg + " " + styles.bg2}></div>
-      <div className={styles.bg + " " + styles.bg3}></div>
-
       <div className={styles.title}>
+        <img src="/static/beerhero.jpg" alt="beer hero" />
         <h1>Golden Bro Beers</h1>
       </div>
 

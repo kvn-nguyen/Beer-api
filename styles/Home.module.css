@@ -1,7 +1,32 @@
+.container {
+  animation: scroll 70s linear infinite;
+  background-color: #00b2c9;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  color: white;min-height: 100vh;
+  min-width: 300px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  width: 100%;
+}
+
 .title {
   display: flex;
+  height: 280px;
   justify-content: center;
-  padding-top: 1rem;
+}
+
+.title img {
+  height: 100%;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.pageName {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .beer {
@@ -26,20 +51,21 @@
 }
 
 .formSort {
-  display: flex;
   border-bottom: 2px solid white;
   color: white;
+  display: flex;
   display: inline-flex;
   margin: 0 1rem 0 1rem;
   padding: 0.5rem;
 }
 .formSort h4 {
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .inSort {
   align-items: center;
+  padding-top: 1rem;
 }
 
 .inSort label {
@@ -49,47 +75,34 @@
 .listAction {
   display: flex;
   margin: 0 auto;
-  padding-top: 1rem;
   overflow-x: scroll;
+  padding-top: 1rem;
 }
-
-.testB {
-  animation: scroll 70s linear infinite;
-  background-color: #00b2c9;
-  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
-  min-height: 100vh;
-  min-width: 300px;
-  width: 100%;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-  color: white;
-}
-
 
 .beerContainer {
-  width: 600px;
   margin: auto;
+  width: 600px;
 }
 
 .beerOverview {
   padding: 2rem 0.8rem 0 0.8rem;
 }
 
-.testB h1 {
+.container h1 {
   display: flex;
   justify-content: center;
   margin: 0;
   padding-top: 1rem;
 }
 
-.testB img {
+.container img {
   height: 300px;
 }
 
 .detailPic {
   display: flex;
-  padding-top: 2rem;
   justify-content: space-around;
+  padding-top: 2rem;
 }
 
 .detail h1{
@@ -115,50 +128,17 @@
     background-position: 0px 0px;
   }
   100%{
-    background-position: 1500px 1500px;
+    background-position: 1000px 1000px;
   }
 }
 
 @media (prefers-reduced-motion) {
-  .testB {
+  .container {
     animation: scroll 200s linear infinite;
   }
 }
 
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
-
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
-}
-
-.bg3 {
-  animation-duration:5s;
-}
-
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
-}
-
 @media all and (max-height: 900px) {
-  .title {
-    padding-top: 1rem;
-  }
   .listAction {
     padding-top: 2rem;
   }
